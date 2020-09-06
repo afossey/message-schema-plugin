@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>com.github.madbrain.message-schema-plugin</id>
+    <name>Message JSON Schema</name>
+    <vendor email="ludovic.lhours@gmail.com" url="http://github.com/madbrain">MadBrain</vendor>
+
+    <description><![CDATA[
+    This plugin is used to provide validation and completion to message extractor spec string
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="JAVA" implementationClass="com.github.madbrain.jschema.ExtractorSpecAnnotator"/>
+        <fileBasedIndex implementation="com.github.madbrain.jschema.ClassSchemaIndex"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
