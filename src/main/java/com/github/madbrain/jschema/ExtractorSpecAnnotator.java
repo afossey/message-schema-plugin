@@ -104,7 +104,7 @@ public class ExtractorSpecAnnotator implements Annotator {
         return message;
     }
 
-    private VirtualFile getFile(Module module, String schemaFilePath) {
+    public static VirtualFile getFile(Module module, String schemaFilePath) {
         // TODO also look in classes
         for (VirtualFile contentRoot : OrderEnumerator.orderEntries(module).recursively().productionOnly().sources().getRoots()) {
             VirtualFile schemaFile = contentRoot.findFileByRelativePath(schemaFilePath);

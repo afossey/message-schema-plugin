@@ -14,6 +14,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <annotator language="JAVA" implementationClass="com.github.madbrain.jschema.ExtractorSpecAnnotator"/>
         <fileBasedIndex implementation="com.github.madbrain.jschema.ClassSchemaIndex"/>
+        <completion.contributor language="JAVA" implementationClass="com.github.madbrain.jschema.SpecCompletionContributor" order="first"/>
     </extensions>
 
     <actions>
